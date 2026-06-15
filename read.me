@@ -1,0 +1,85 @@
+# Bank Management Application 🏦
+
+A **C++ based Bank Management System** simulating core banking operations using **Object-Oriented Programming** and **File Handling**.
+
+> Thiranex Internship — Project 2
+
+---
+
+## Features
+
+- ✅ Create Savings & Current Bank Accounts
+- ✅ Deposit Money
+- ✅ Withdraw Money (with overdraft support for Current accounts)
+- ✅ Balance Inquiry
+- ✅ Transaction History
+- ✅ Interest Application (Savings accounts)
+- ✅ Secure PIN-based authentication
+- ✅ Persistent data storage using file handling
+
+---
+
+## OOP Concepts Used
+
+| Concept | Where Used |
+|---|---|
+| **Classes & Objects** | `BankAccount`, `SavingsAccount`, `CurrentAccount`, `Transaction`, `Bank` |
+| **Inheritance** | `SavingsAccount` and `CurrentAccount` inherit from `BankAccount` |
+| **Polymorphism** | `withdraw()` overridden in `CurrentAccount` |
+| **Encapsulation** | Private/protected members with getters |
+| **Abstraction** | `Bank` class hides internal logic from `main()` |
+
+---
+
+## File Handling
+
+- `accounts.dat` — stores all account records (type, number, name, balance, PIN)
+- `<AccNo>_txn.dat` — stores full transaction history per account
+- Data **persists between program runs**
+
+---
+
+## How to Compile & Run
+
+```bash
+# Compile
+g++ -std=c++17 -o bank_management bank_management.cpp
+
+# Run
+./bank_management
+```
+
+---
+
+## Project Structure
+
+```
+├── bank_management.cpp   # Main source file (all classes + main)
+├── README.md             # Project documentation
+├── accounts.dat          # Auto-generated on first run
+└── ACC1001_txn.dat       # Auto-generated per account
+```
+
+---
+
+## Sample Output
+
+```
+╔══════════════════════════════════════════╗
+║      BANK MANAGEMENT APPLICATION        ║
+║         C++ OOP + File Handling         ║
+╚══════════════════════════════════════════╝
+
+─────────── MAIN MENU ───────────
+1. Create New Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Transaction History
+6. Apply Interest (Savings)
+0. Exit
+```
+
+---
+
+*Developed as part of the Thiranex C++ Programming Internship*
